@@ -4,13 +4,13 @@ import pytest
 
 def test_basic_priority_queueing():
     pq = PriorityQueue
-    pq.enqueue({"nome": "arquivo_prioritario1.txt",
+    pq.enqueue({"nome_do_arquivo": "arquivo_prioritario1.txt",
                 "qtd_linhas": 2,
                 "linhas_do_arquivo": [1, 2]})
-    pq.enqueue({"nome": "arquivo_nao_prioritario.txt",
+    pq.enqueue({"nome_do_arquivo": "arquivo_nao_prioritario.txt",
                 "qtd_linhas": 10,
                 "linhas_do_arquivo": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]})
-    pq.enqueue({"nome": "arquivo_prioritario2.txt",
+    pq.enqueue({"nome_do_arquivo": "arquivo_prioritario2.txt",
                 "qtd_linhas": 1,
                 "linhas_do_arquivo": [1]})
 
