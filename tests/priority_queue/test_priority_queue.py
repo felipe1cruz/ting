@@ -3,7 +3,7 @@ import pytest
 
 
 def test_basic_priority_queueing():
-    pq = PriorityQueue
+    pq = PriorityQueue()
     pq.enqueue({"nome_do_arquivo": "arquivo_prioritario1.txt",
                 "qtd_linhas": 2,
                 "linhas_do_arquivo": [1, 2]})
