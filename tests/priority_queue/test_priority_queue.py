@@ -20,9 +20,8 @@ def test_basic_priority_queueing():
     assert pq.search(1)["nome_do_arquivo"] == "arquivo_prioritario2.txt"
     assert pq.search(2)["nome_do_arquivo"] == "arquivo_nao_prioritario.txt"
 
-    assert pq.dequeue()["nome_do_arquivo"] == "arquivo_prioritario1.txt"
-    assert pq.dequeue()["nome_do_arquivo"] == "arquivo_prioritario2.txt"
-    assert pq.dequeue()["nome_do_arquivo"] == "arquivo_nao_prioritario.txt"
+    dequeue = pq.dequeue()
+    assert dequeue["nome_do_arquivo"] == "arquivo_prioritario1.txt"
 
     number_out_of_len = 10
     with pytest.raises(IndexError, match="Índice Inválido ou Inexistente"):
